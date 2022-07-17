@@ -23,7 +23,7 @@ type application struct {
 func main() {
 	var cfg config
 
-	flag.IntVar(&cfg.port, "port", 8080, "port to listen on")
+	flag.IntVar(&cfg.port, "port", 4000, "port to listen on")
 	flag.StringVar(&cfg.env, "env", "development", "environment")
 	flag.Parse()
 
