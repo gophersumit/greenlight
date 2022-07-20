@@ -8,10 +8,12 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Wed Jul 20 10:27:51 2022
+# Make data base, printed on Wed Jul 20 22:00:08 2022
 
 # Variables
 
+# environment
+FPS_BROWSER_APP_PROFILE_STRING = Internet Explorer
 # environment
 SYSTEMDRIVE = C:
 # environment
@@ -39,7 +41,9 @@ GOPATH = C:\Users\Admin\go
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_18868_CZFGDVHZRVFRLLML
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_5260_WSYRFOCFGLCNDKDA
+# environment
+FPS_BROWSER_USER_PROFILE_STRING = Default
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -75,6 +79,8 @@ APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL = 1
 # automatic
 *D = $(patsubst %/,%,$(patsubst %\,%,$(dir $*)))
 # environment
+GREENLIGHT_DB_DSN = postgres://greenlight:pa55word@localhost/greenlight?sslmode=disable
+# environment
 PROGRAMFILES = C:\Program Files (x86)
 # environment
 MFLAGS = -pqrR
@@ -91,7 +97,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 18868
+VSCODE_PID = 5260
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -99,7 +105,8 @@ VSCODE_PID = 18868
 # automatic
 <D = $(patsubst %/,%,$(patsubst %\,%,$(dir $<)))
 # environment
-VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport":true}
+VSCODE_NLS_CONFIG = {"locale":"en-us","availableLanguages":{},"_languagePackSupport 
+":true}
 # default
 MAKE_HOST := Windows32
 # environment
@@ -211,7 +218,7 @@ PROCESSOR_REVISION = 8e0a
 # environment
 PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
 # variable set hash-table stats:
-# Load=99/1024=10%, Rehash=0, Collisions=7/125=6%
+# Load=102/1024=10%, Rehash=0, Collisions=9/128=7%
 
 # Pattern-specific Variable Values
 
@@ -219,7 +226,8 @@ PROCESSOR_IDENTIFIER = Intel64 Family 6 Model 142 Stepping 10, GenuineIntel
 
 # Directories
 
-# . (key d:/projects/greenlight, mtime 1658140614): 16 files, no impossibilities.
+# . (key d:/projects/greenlight, mtime 165814061 
+4): 16 files, no impossibilities.
 
 # 16 files, no impossibilities in 1 directories.
 
@@ -263,6 +271,6 @@ all:
 # strcache performance: lookups = 23 / hit rate = 17%
 # hash-table stats:
 # Load=19/8192=0%, Rehash=0, Collisions=0/23=0%
-# Finished Make data base on Wed Jul 20 10:27:51 2022
+# Finished Make data base on Wed Jul 20 22:00:08 2022
 
  
