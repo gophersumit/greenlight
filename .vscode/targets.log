@@ -8,7 +8,7 @@ make: *** No rule to make target 'all'.  Stop.
 # This is free software: you are free to change and redistribute it.
 # There is NO WARRANTY, to the extent permitted by law.
 
-# Make data base, printed on Tue Jul 19 10:36:13 2022
+# Make data base, printed on Wed Jul 20 10:27:51 2022
 
 # Variables
 
@@ -39,7 +39,7 @@ GOPATH = C:\Users\Admin\go
 # automatic
 @D = $(patsubst %/,%,$(patsubst %\,%,$(dir $@)))
 # environment
-CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_14628_KDNTUDINEOZOZJFY
+CHROME_CRASHPAD_PIPE_NAME = \\.\pipe\crashpad_18868_CZFGDVHZRVFRLLML
 # environment
 VSCODE_HANDLES_UNCAUGHT_ERRORS = true
 # default
@@ -91,7 +91,7 @@ MAKEFILE_LIST := Makefile
 # automatic
 @F = $(notdir $@)
 # environment
-VSCODE_PID = 14628
+VSCODE_PID = 18868
 # automatic
 ?D = $(patsubst %/,%,$(patsubst %\,%,$(dir $?)))
 # automatic
@@ -121,7 +121,7 @@ MAKELEVEL := 0
 # default
 MAKE = $(MAKE_COMMAND)
 # environment
-PATH = C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Go\bin;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\TDM-GCC-64\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\Neovim\/bin;C:\Program Files\erl-24.1.7\bin;C:\Program Files (x86)\Elixir\bin;C:\Users\Admin\.mix\escripts;D:\projects\yoga;C:\Users\Admin\Downloads\protoc-21.2-win64\bin;C:\Program Files\GitHub CLI\;C:\Users\Admin\scoop\shims;C:\Users\Admin\.cargo\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;C:\Users\Admin\go\bin;C:\Users\Admin\.dotnet\tools;C:\ghcup\bin;C:\Users\Admin\AppData\Roaming\npm;C:\Program Files\Neovim\bin;C:\Users\Admin\AppData\Local\JetBrains\Toolbox\scripts;D:\projects\yoga;C:\Users\Admin\Downloads\protoc-21.2-win64\bin;
+PATH = C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;C:\Program Files\Go\bin;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files\dotnet\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\TDM-GCC-64\bin;C:\ProgramData\chocolatey\bin;C:\Program Files\nodejs\;C:\Program Files\Neovim\/bin;C:\Program Files\erl-24.1.7\bin;C:\Program Files (x86)\Elixir\bin;C:\WINDOWS\system32\config\systemprofile\.mix\escripts;D:\projects\yoga;C:\Users\Admin\Downloads\protoc-21.2-win64\bin;C:\Program Files\GitHub CLI\;C:\Program Files\PostgreSQL\14\bin;C:\Users\Admin\scoop\shims;C:\Users\Admin\.cargo\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;C:\Users\Admin\AppData\Local\Microsoft\WindowsApps;C:\Users\Admin\go\bin;C:\Users\Admin\.dotnet\tools;C:\ghcup\bin;C:\Users\Admin\AppData\Roaming\npm;C:\Program Files\Neovim\bin;C:\Users\Admin\AppData\Local\JetBrains\Toolbox\scripts;D:\projects\yoga;C:\Users\Admin\Downloads\protoc-21.2-win64\bin;
 # environment
 ZES_ENABLE_SYSMAN = 1
 # environment
@@ -133,7 +133,7 @@ MAKEFILES :=
 # environment
 PROMPT = $P$G
 # environment
-CHOCOLATEYLASTPATHUPDATE = 133008298300227605
+CHOCOLATEYLASTPATHUPDATE = 133026847948585900
 # environment
 LOGONSERVER = \\DESKTOP-8NI0650
 # environment
@@ -174,8 +174,7 @@ PUBLIC = C:\Users\Public
 APPDATA = C:\Users\Admin\AppData\Roaming
 # environment
 HOMEDRIVE = C:
-# environment 
-
+# environment
 PROCESSOR_ARCHITECTURE = x86
 # environment
 PASSWORD = Random@12345
@@ -264,6 +263,6 @@ all:
 # strcache performance: lookups = 23 / hit rate = 17%
 # hash-table stats:
 # Load=19/8192=0%, Rehash=0, Collisions=0/23=0%
-# Finished Make data base on Tue Jul 19 10:36:13 2022
+# Finished Make data base on Wed Jul 20 10:27:51 2022
 
  
