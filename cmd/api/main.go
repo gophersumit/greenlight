@@ -72,7 +72,7 @@ func main() {
 		Addr:         fmt.Sprintf(":%d", cfg.port),
 		Handler:      app.routes(),
 		IdleTimeout:  time.Minute,
-		ReadTimeout:  time.Second * 10,
+		ReadTimeout:  time.Second * 15,
 		WriteTimeout: time.Second * 30,
 	}
 
