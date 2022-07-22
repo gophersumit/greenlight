@@ -83,25 +83,25 @@ func (app *application) createMovieHandler(w http.ResponseWriter, r *http.Reques
 }
 
 func (app *application) updateMovieHandler(w http.ResponseWriter, r *http.Request) {
-	movieId, err := app.readIDParam(r)
+	id, err := app.readIDParam(r)
 	if err != nil {
 		app.notFoundResponse(w, r)
 		return
 	}
 
-	movie, err := app.models.Movies.Get(movieId)
+	// Retrieve the movie record as normal.
+	movie, err := app.models.Movies.Get(id)
 	if err != nil {
 		switch {
 		case errors.Is(err, data.ErrRecordNotFound):
 			app.notFoundResponse(w, r)
-			return
 		default:
 			app.serverErrorResponse(w, r, err)
-			return
-
 		}
+		return
 	}
 
+	// Use pointers for the Title, Year and Runtime fields.
 	var input struct {
 		Title   *string       `json:"title"`
 		Year    *int32        `json:"year"`
@@ -109,9 +109,24 @@ func (app *application) updateMovieHandler(w http.ResponseWriter, r *http.Reques
 		Genres  []string      `json:"genres"`
 	}
 
+	// Decode the JSON as normal.
+	err = app.readJSON(w, r, &input)
+	if err != nil {
+		app.badRequestResponse(w, r, err)
+		return
+	}
+
+	// If the input.Title value is nil then we know that no corresponding "title" key/
+	// value pair was provided in the JSON request body. So we move on and leave the
+	// movie record unchanged. Otherwise, we update the movie record with the new title
+	// value. Importantly, because input.Title is a now a pointer to a string, we need
+	// to dereference the pointer using the * operator to get the underlying value
+	// before assigning it to our movie record.
 	if input.Title != nil {
 		movie.Title = *input.Title
 	}
+
+	// We also do the same for the other fields in the input struct.
 	if input.Year != nil {
 		movie.Year = *input.Year
 	}
@@ -119,16 +134,11 @@ func (app *application) updateMovieHandler(w http.ResponseWriter, r *http.Reques
 		movie.Runtime = *input.Runtime
 	}
 	if input.Genres != nil {
-		movie.Genres = input.Genres
+		movie.Genres = input.Genres // Note that we don't need to dereference a slice.
 	}
 
-	// Initialize a new Validator.
 	v := validator.New()
 
-	// Call the ValidateMovie() function and return a response containing the errors if
-	// any of the checks fail.
-	app.logger.Println("Validating movie:", movie)
-	app.logger.Println("input:", input)
 	if data.ValidateMovie(v, movie); !v.Valid() {
 		app.failedValidationResponse(w, r, v.Errors)
 		return
@@ -143,7 +153,6 @@ func (app *application) updateMovieHandler(w http.ResponseWriter, r *http.Reques
 	err = app.writeJSON(w, http.StatusOK, envelope{"movie": movie}, nil)
 	if err != nil {
 		app.serverErrorResponse(w, r, err)
-		return
 	}
 }
 
